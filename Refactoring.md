@@ -12,12 +12,12 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 In the refactored code, I made several changes to improve readability and maintainability:
 
-Extracted the constants: I introduced a separate constants module and used it to store the TRIVIAL_PARTITION_KEY and MAX_PARTITION_KEY_LENGTH constants. This separation helps to keep the main code cleaner and easier to understand.
+- Extracted the constants: I introduced a separate constants module and used it to store the TRIVIAL_PARTITION_KEY and MAX_PARTITION_KEY_LENGTH constants. This separation helps to keep the main code cleaner and easier to understand.
 
-Simplified variable assignment: Instead of using nested if statements to assign the candidate variable, I used a single assignment statement with a logical OR (||) operator. This makes the code more concise and reduces nesting.
+- Simplified variable assignment: Instead of using nested if statements to assign the candidate variable, I used a single assignment statement with a logical OR (||) operator. This makes the code more concise and reduces nesting.
 
-Reordered and simplified conditionals: I rearranged the conditionals to follow a logical flow. First, I check if candidate is not a string and convert it to a JSON string if necessary. Then, I handle the case where candidate is falsy (null or undefined) and assign the TRIVIAL_PARTITION_KEY to it. This order makes the code easier to read and understand.
+- Reordered and simplified conditionals: I rearranged the conditionals to follow a logical flow. First, I check if candidate is not a string and convert it to a JSON string if necessary. Then, I handle the case where candidate is falsy (null or undefined) and assign the TRIVIAL_PARTITION_KEY to it. This order makes the code easier to read and understand.
 
-Improved code formatting: I applied consistent indentation, spacing, and line breaks to enhance readability.
+- Improved code formatting: I applied consistent indentation, spacing, and line breaks to enhance readability.
 
 These changes make the refactored code more readable by reducing unnecessary nesting, simplifying conditionals, and extracting constants to a separate module. The code follows a logical flow, making it easier to understand the purpose and functionality of each part.
