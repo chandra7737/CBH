@@ -23,14 +23,12 @@ Description:
 Currently, the system uses internal database IDs for Agents on generated reports. To provide more flexibility, we need to add a custom ID field for Facilities to save their own Agent IDs. This will allow Facilities to use their preferred identification system when generating reports.
 
 Acceptance Criteria:
-
 - A new custom ID field is added to the Agents table in the database.
 - Facilities can enter and save custom IDs for each Agent they work with.
 - The custom ID field is displayed and editable in the Facility's user interface.
 - Custom IDs are associated with the respective Agents in the system.
 
 Implementation Details:
-
 - Add a new column named "custom_id" to the Agents table in the database.
 - Update the Agents model and schema to include the new "custom_id" field.
 - Create an API endpoint to handle updating and retrieving custom IDs for Agents.
@@ -45,13 +43,11 @@ Description:
 Currently, the generateReport function uses the internal database ID for Agents when generating reports. To incorporate the newly added custom ID field, we need to update the generateReport function to use the custom ID instead.
 
 Acceptance Criteria:
-
 - The generateReport function retrieves the custom ID of each Agent from the database.
 - The custom ID is used in the report generation process instead of the internal database ID.
 - The generated reports display the custom ID for each Agent.
 
 Implementation Details:
-
 - Modify the generateReport function to retrieve the custom ID of each Agent using the updated database query.
 - Update the report generation code to use the custom ID instead of the internal database ID.
 - Verify that the generated reports display the custom ID correctly.
@@ -64,12 +60,10 @@ Description:
 Currently, the getShiftsByFacility function returns Shifts for a given Facility, including some metadata about the assigned Agents. To include the custom IDs of Agents in the returned Shifts, we need to update the getShiftsByFacility function.
 
 Acceptance Criteria:
-
 - The getShiftsByFacility function retrieves the custom ID of each Agent from the database.
 - The custom ID is included in the metadata about the assigned Agents returned by the function.
 
 Implementation Details:
-
 - Update the getShiftsByFacility function to retrieve the custom ID of each Agent using the updated database query.
 - Modify the returned Shifts data structure to include the custom ID in the metadata about the assigned Agents.
 
@@ -81,12 +75,10 @@ Description:
 Currently, the report generation process converts Shifts into a PDF for submission. To reflect the changes made for custom IDs, we need to update the report generation process to include the custom IDs in the generated PDF.
 
 Acceptance Criteria:
-
 - The report generation process retrieves the custom ID of each Agent from the database.
 - The custom ID is included in the PDF generated for each Shift.
 
 Implementation Details:
-
 - Modify the report generation code to retrieve the custom ID of each Agent using the updated database query.
 - Update the PDF generation code to include the custom ID in the generated PDF for each Shift.
 
